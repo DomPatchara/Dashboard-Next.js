@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Home = () => {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-6 '> 
+    <div className='bg-container flex items-center justify-center'> 
       <div className='text-center'>
         
         <h1 className='text-5xl font-bold text-gray-800 mb-6'> 

@@ -1,10 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import Card from '@/components/dashboard/Card'
 
 const Dashboard = () => {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-200 p-8'>
+    <div className='bg-container'>
         <div className='max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8 space-y-8'>
             <div className='flex flex-col'>
                 <h1 className='text-4xl font-extrabold text-gray-900 mb-4 sm:mb-0'>
@@ -16,7 +15,7 @@ const Dashboard = () => {
                 </p>
             </div>
 
-            {/** Dashboard Grid */}
+            {/** Dashboard Grid Responsive */}
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8'>
 
                 {/**Task Card */}
@@ -58,6 +57,7 @@ const Dashboard = () => {
                     bgcolor='bg-yellow-100'
                     hoverbg='bg-yellow-200'
                 />
+                
             </div>
         </div>
     </div>

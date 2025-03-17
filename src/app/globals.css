@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+
+@layer components {
+    .bg-container {
+        @apply min-h-screen p-8 bg-gradient-to-br from-blue-100 to-indigo-300
+    }
+}

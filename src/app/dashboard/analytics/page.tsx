@@ -2,27 +2,27 @@ import React from 'react'
 
 const Analytics = () => {
 
-  const metric = [
+  const metrics = [
     {
-      titel: "Total Sales",
+      title: "Total Sales",
       value: "$120,000",
       change: "+12%",
       isPositive: true,
     },
     {
-      titel: "Active Users",
+      title: "Active Users",
       value: "1,200",
       change: "-8%",
       isPositive: false,
     },
     {
-      titel: "Website Visits",
+      title: "Website Visits",
       value: "8,500",
       change: "+5%",
       isPositive: true,
     },
     {
-      titel: "New Sign-Ups",
+      title: "New Sign-Ups",
       value: "350",
       change: "+18%",
       isPositive: true,
@@ -31,8 +31,109 @@ const Analytics = () => {
 
 
   return (
-    <div>
-      
+    <div className='bg-container'>
+      <div className='max-w-7xl p-8 mx-auto bg-white rounded-lg shadow-xl'>
+
+        <h1 className='font-bold text-3xl text-gray-800 mb-8'>
+          Analytics Dashboard
+        </h1>
+
+        {/** Overview Metrics Section */}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {
+            metrics.map((metric, index)=>(
+              <div 
+                key={index}
+                className={`flex justify-between items-center bg-white rounded-lg shadow-md p-6 border-l-4
+                           ${metric.isPositive ? 'border-green-500' : 'border-red-600'}`}
+              >
+                <div>
+                  <h3 className='text-xl font-semibold text-gray-700'>
+                    {metric.title}
+                  </h3>
+                  <p className='text-gray-600 text-lg mt-2'>{metric.value}</p>
+                </div>
+
+                <div className='text-right'>
+                  <p className={`${metric.isPositive ? 'text-green-600' : 'text-red-600'}`}>{metric.change}</p>
+                </div>
+                
+              </div>
+            ))
+          }  
+        </div>
+
+        {/**Chart Section (Placeholder For Graph) */}
+        <div className="mb-8 mt-5">
+            <h2 className='text-xl font-semibold text-gray-700 mb-4'>
+              Website Traffic
+            </h2>
+
+            <div className='bg-gray-100 rounded-lg h-72 text-gray-400'>
+              Chart Placeholder
+            </div>
+        </div>
+
+        <div className="mb-8">
+            <h2 className='text-xl font-semibold text-gray-700 mb-4'>
+              Website Traffic
+            </h2>
+
+            <div className='bg-gray-100 rounded-lg h-72 text-gray-400 '>
+              Chart Placeholder
+            </div>
+        </div>
+
+        {/** Recent Activities */}
+        
+        <div className="mb-8">
+          <h2 className='text-xl font-semibold text-gray-700 mb-4'>
+            Recent Activities
+          </h2>
+
+          <ul className='space-y-4'>
+
+            {/** User Registration */}
+            <li className='flex items-center justify-between bg-white rounded-lg shadow-md p-4'>
+              <div>
+                <h3 className='text-lg font-semibold text-gray-700'>User Registration</h3>
+                <p className="text-sm text-gray-600">New user signed up on 2026-02-15</p>
+              </div>
+              <div>
+                <p className='text-sm text-gray-500'>+10 Users</p>
+              </div>
+            </li>
+
+            {/** Sales Increase */}
+            <li className='flex items-center justify-between bg-white rounded-lg shadow-md p-4'>
+              <div>
+                <h3 className='text-lg font-semibold text-gray-700'>Sales Increase</h3>
+                <p className="text-sm text-gray-600">Sale grow by 12% on 2026-02-15</p>
+              </div>
+              <div>
+                <p className='text-sm text-gray-500'> +75,000 Bath</p>
+              </div>
+            </li>
+
+
+            {/**Website Traffic Surge*/}
+            <li className='flex items-center justify-between bg-white rounded-lg shadow-md p-4'>
+              <div>
+                <h3 className='text-lg font-semibold text-gray-700'>Website Traffic Surge</h3>
+                <p className="text-sm text-gray-600">Traffic increase by 8% on 2026-02-15</p>
+              </div>
+              <div>
+                <p className='text-sm text-gray-500'>+200 Visits</p>
+              </div>
+            </li>
+
+          </ul>
+          
+        </div>
+
+      </div>
+
     </div>
   )
 }
