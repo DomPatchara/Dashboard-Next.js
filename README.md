@@ -7,9 +7,16 @@ A simple dashboard UI built with Next.js 15. Key learning includes Nested Routes
 - Uses Next.js 15 with App Router
 
 ## 🔑 Key Learnings
-- How to use Nested Routes in Next.js 15
+- How to use **Nested Routes** in Next.js 15
 - How to navigate using <Link>
-- Organizing a dashboard UI structure
+- dashboard UI structure
 
-![image](https://github.com/user-attachments/assets/5431f3a3-005f-4d45-a71e-6be2ea31cf3f)
+## 🛠️ Tech Stack
+- Next.js 15
+- React
+- Tailwind CSS
+
+## 📷 Screenshots
+![image](https://github.com/user-attachments/assets/6a3647ee-1736-4e31-a9e4-483a0a1bdd86)
+
 
